@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.navcomp.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_redFragment"
+            app:destination="@id/redFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/from_left" />
+        <action
+            android:id="@+id/action_firstFragment_to_greenFragment"
+            app:destination="@id/greenFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_firstFragment_to_blueFragment"
+            app:destination="@id/blueFragment"
+            app:enterAnim="@anim/from_top"
+            app:exitAnim="@anim/to_bottom" />
+    </fragment>
+    <fragment
+        android:id="@+id/redFragment"
+        android:name="com.example.navcomp.RedFragment"
+        android:label="fragment_red"
+        tools:layout="@layout/fragment_red" >
+        <action
+            android:id="@+id/action_redFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popExitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/greenFragment"
+        android:name="com.example.navcomp.GreenFragment"
+        android:label="fragment_green"
+        tools:layout="@layout/fragment_green" >
+        <action
+            android:id="@+id/action_greenFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/blueFragment"
+        android:name="com.example.navcomp.BlueFragment"
+        android:label="fragment_blue"
+        tools:layout="@layout/fragment_blue" >
+        <action
+            android:id="@+id/action_blueFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:enterAnim="@anim/from_top"
+            app:exitAnim="@anim/to_bottom" />
+    </fragment>
+</navigation>
