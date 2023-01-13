@@ -64,10 +64,12 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        View view = inflater.inflate(R.layout.fragment_first, container, false);
+
         NavController navController = Navigation.findNavController((AppCompatActivity) this.getContext(), R.id.fragmentContainerView);
         NavigationUI.setupActionBarWithNavController((AppCompatActivity) this.getContext(), navController);
 
-        View view = inflater.inflate(R.layout.fragment_first, container, false);
+
 
         Button red = view.findViewById(R.id.red);
         red.setOnClickListener(new View.OnClickListener() {

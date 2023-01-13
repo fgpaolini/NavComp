@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="First Fragment"
+        android:id="@+id/firstFragmentItem"
+        android:icon="@drawable/ic_baseline_apps_24"
+        android:iconTint="@color/white"
+        />
+    <item android:title="Red Fragment"
+        android:id="@+id/redFragmentItem"
+        android:icon="@drawable/ic_baseline_circle_24"
+        android:iconTint="#FF0000"/>
+    <item android:title="Green Fragment"
+        android:icon="@drawable/ic_baseline_circle_24"
+        android:iconTint="#009688"/>
+    <item android:title="Blue Fragment"
+        android:icon="@drawable/ic_baseline_circle_24"
+        android:iconTint="#2196F3"/>
+</menu>
